@@ -1,0 +1,24 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <form>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email ou Telefone</mat-label>
+        <input matInput type="text" [(ngModel)]="emailOuTelefone" name="emailOuTelefone" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" [(ngModel)]="senha" name="senha" required>
+      </mat-form-field>
+  
+      <a href="#" class="forgot-password-link">Esqueci a senha</a>
+  
+      <button mat-raised-button color="primary" class="login-button" (click)="entrar()">Entrar</button>
+    </form>
+  
+    <p class="create-account">
+      Não tem uma conta? <a routerLink="/cadastro">Crie uma!</a>
+    </p>
+    <button mat-raised-button color="accent" class="signup-button" routerLink="/cadastro">Cadastrar</button>
+  </mat-card>
+</div>

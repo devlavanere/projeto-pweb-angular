@@ -1,0 +1,55 @@
+<mat-card>
+    <form>
+      <h2>Cadastro</h2>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Nome Completo</mat-label>
+        <input matInput type="text" [(ngModel)]="nomeCompleto" name="nomeCompleto" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Email ou Telefone</mat-label>
+        <input matInput type="text" [(ngModel)]="emailOuTelefone" name="emailOuTelefone" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" [(ngModel)]="senha" name="senha" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Repita a Senha</mat-label>
+        <input matInput type="password" [(ngModel)]="repitaSenha" name="repitaSenha" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="dataNascimento" name="dataNascimento" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+  
+      <label>Seu gênero é:</label>
+      <mat-radio-group class="full-width" [(ngModel)]="genero" name="genero">
+        <mat-radio-button value="Masculino">Masculino</mat-radio-button>
+        <mat-radio-button value="Feminino">Feminino</mat-radio-button>
+        <mat-radio-button value="Outro">Outro</mat-radio-button>
+      </mat-radio-group>
+  
+      <label>Você é um:</label>
+      <mat-radio-group class="full-width" [(ngModel)]="perfil" name="perfil">
+        <mat-radio-button value="Professor">Professor</mat-radio-button>
+        <mat-radio-button value="Aluno">Aluno</mat-radio-button>
+      </mat-radio-group>
+  
+      <button mat-raised-button color="accent" class="green-button" (click)="cadastrar()">Cadastrar</button>
+  
+      <p>
+        Você aceita os <a href="#">termos de serviço</a>?
+      </p>
+      <mat-checkbox [(ngModel)]="aceitaTermos" name="aceitaTermos" required>
+        Eu aceito
+      </mat-checkbox>
+    </form>
+  </mat-card>
+  

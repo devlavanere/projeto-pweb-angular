@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <span>{{ nomeProfessor }}</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+  
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>Alunos</button>
+</mat-menu>
+  
+<div *ngFor="let aluno of alunos" class="card-aluno">
+    <mat-icon>person</mat-icon>
+    <p>{{ aluno.nome }}</p>
+    <p>{{ aluno.email }}</p>
+</div>
+  
