@@ -1,15 +1,6 @@
 {
   "usuarios": [
     {
-      "id": "643",
-      "nomeCompleto": "Michel Lavanere",
-      "emailOuTelefone": "lavanere.ls@gmail.com",
-      "senha": "47mm8796",
-      "dataNascimento": null,
-      "genero": "Masculino",
-      "perfil": "Aluno"
-    },
-    {
       "id": "324",
       "nomeCompleto": "Michel Lavanere",
       "emailOuTelefone": "lavanere.ls@gmail.com",
